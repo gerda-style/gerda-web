@@ -1149,23 +1149,184 @@
           border-radius: 4px;
         }
       }
+      equipo-section {
+        padding: 6rem 4rem;
+        background: var(--bg);
+      }
+      .equipo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-top: 0;
+      }
+      .equipo-card {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        background: var(--bg2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 6px;
+        padding: 2rem;
+        transition: border-color 0.25s;
+      }
+      .equipo-card:hover {
+        border-color: rgba(233, 30, 140, 0.3);
+      }
+      .equipo-foto {
+        width: 140px;
+        height: 170px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 4px;
+        flex-shrink: 0;
+      }
+      .equipo-info {
+        flex: 1;
+      }
+      .equipo-nombre {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        letter-spacing: 0.04em;
+        margin-bottom: 4px;
+      }
+      .equipo-rol {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--magenta);
+        margin-bottom: 1rem;
+      }
+      .equipo-bio {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+      .equipo-tags {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .equipo-tag {
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 2px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-muted);
+      }
+
+      .productos-section {
+        padding: 6rem 4rem;
+        background: var(--bg2);
+      }
+      .productos-intro {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+        max-width: 700px;
+        margin-bottom: 3rem;
+      }
+      .productos-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      .producto-foto {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: 4px;
+        display: block;
+      }
+      .marcas-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      .marca-card {
+        background: var(--bg3);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 6px;
+        padding: 1.5rem 1.8rem;
+        transition: border-color 0.25s;
+      }
+      .marca-card:hover {
+        border-color: rgba(233, 30, 140, 0.25);
+      }
+      .marca-nombre {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.4rem;
+        letter-spacing: 0.06em;
+        margin-bottom: 0.3rem;
+        color: var(--white);
+      }
+      .marca-linea {
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--magenta);
+        margin-bottom: 0.7rem;
+      }
+      .marca-desc {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+      }
+      .filosofia-box {
+        margin-top: 3rem;
+        background: var(--bg3);
+        border-left: 3px solid var(--magenta);
+        padding: 1.5rem 2rem;
+        border-radius: 0 6px 6px 0;
+      }
+      .filosofia-box p {
+        font-size: 0.92rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+      .filosofia-box strong {
+        color: var(--white);
+      }
+
+      @media (max-width: 900px) {
+        .equipo-section,
+        .productos-section {
+          padding: 4rem 1.5rem;
+        }
+        .equipo-grid,
+        .productos-grid,
+        .marcas-grid {
+          grid-template-columns: 1fr;
+        }
+        .equipo-card {
+          flex-direction: column;
+        }
+        .equipo-foto {
+          width: 100%;
+          height: 220px;
+        }
+      }
     </style>
   </head>
   <body>
     <nav>
       <a href="#" class="nav-logo"
-        ><img
-          src="logo.png"
-          alt="Gerda X Hair Studio"
+        ><img src="logo.png" alt="Gerda X Hair Studio"
       /></a>
       <ul class="nav-links">
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#trabajos">Trabajos</a></li>
         <li><a href="#capacitacion">Capacitación</a></li>
         <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Productos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+
       <a href="#contacto" class="nav-cta">Reservar turno</a>
     </nav>
 
@@ -1288,28 +1449,19 @@
           </div>
         </div>
         <div class="gallery-item">
-          <img
-            src="model2.jpg"
-            alt="Peinado evento de moda Paysandú"
-          />
+          <img src="model2.png" alt="Peinado evento de moda Paysandú" />
           <div class="gallery-overlay">
             <span class="gallery-label">Evento de moda</span>
           </div>
         </div>
         <div class="gallery-item">
-          <img
-            src="model1.jpg"
-            alt="Balayage rubio coloración"
-          />
+          <img src="model1.jpg" alt="Balayage rubio coloración" />
           <div class="gallery-overlay">
             <span class="gallery-label">Balayage rubio</span>
           </div>
         </div>
         <div class="gallery-item">
-          <img
-            src="trabajo.jpg"
-            alt="Backstage modelo peinado"
-          />
+          <img src="trabajo.jpg" alt="Backstage modelo peinado" />
           <div class="gallery-overlay">
             <span class="gallery-label">Backstage modelo</span>
           </div>
@@ -1321,7 +1473,7 @@
       <div class="training-inner">
         <div class="training-video-wrap">
           <video controls playsinline preload="metadata">
-            <source src="video.mp4" type="video/mp4">
+            <source src="video.mp4" type="video/mp4" />
             Tu navegador no soporta video HTML5.
           </video>
         </div>
@@ -1508,6 +1660,83 @@
       </div>
     </section>
 
+    <section class="equipo-section" id="equipo">
+      <p class="section-eyebrow">El equipo</p>
+      <h2 class="section-title">Quiénes somos</h2>
+      <div class="equipo-grid">
+        <div class="equipo-card">
+          <img
+            class="equipo-foto"
+            src="Antho.JPG"
+            alt="Anthony — Estilista profesional Gerda X Hair Studio"
+          />
+          <div class="equipo-info">
+            <div class="equipo-nombre">Anthony Roldan</div>
+            <div class="equipo-rol">Director Técnico</div>
+            <p class="equipo-bio">
+              Anthony Roldán es director técnico y cofundador de Gerda Hair
+              Studio. Especialista en colorimetría, diseño de color y
+              formulación, lidera el área técnica del salón, desarrollando
+              diagnósticos personalizados y creando propuestas de color
+              adaptadas a la identidad y necesidades de cada cliente. Su
+              experiencia también se destaca en el estilismo y los peinados para
+              pasarela y certámenes de belleza. Ha estado a cargo del estilismo
+              en importantes competencias internacionales como Miss Universo,
+              Reina Hispanoamericana y Miss Towering, aportando su experiencia
+              en la preparación de candidatas y producciones de alto nivel.
+              Además, ha participado durante dos años consecutivos como
+              estilista en la Semana de la Cerveza, uno de los eventos más
+              importantes del Uruguay, colaborando en la imagen de artistas,
+              modelos y producciones especiales. Su compromiso con la
+              capacitación permanente, la precisión técnica y la búsqueda
+              constante de la excelencia lo convierten en un referente dentro de
+              Gerda Hair Studio, donde combina innovación, conocimiento y pasión
+              por la peluquería profesional
+            </p>
+            <div class="equipo-tags">
+              <span class="equipo-tag">Coloración</span>
+              <span class="equipo-tag">Balayage</span>
+              <span class="equipo-tag">Eventos</span>
+              <span class="equipo-tag">Backstage</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="equipo-card">
+          <img
+            class="equipo-foto"
+            src="Claudio.JPG"
+            alt="Claudio — Estilista profesional Gerda X Hair Studio"
+          />
+          <div class="equipo-info">
+            <div class="equipo-nombre">Claudio</div>
+            <div class="equipo-rol">Director Creativo</div>
+            <p class="equipo-bio">
+              Claudio es director creativo y cofundador de Gerda Hair Studio. Su
+              trabajo está enfocado en la dirección artística, la imagen y el
+              estilismo, desarrollando propuestas que combinan técnica,
+              tendencias y creatividad para lograr resultados personalizados. A
+              lo largo de su carrera ha participado en producciones de moda,
+              campañas, eventos y certámenes de belleza, aportando su visión
+              creativa en cada proyecto. Además, ha formado parte de instancias
+              de capacitación y colaboraciones con marcas profesionales,
+              manteniendo una actualización constante en las últimas tendencias
+              de la industria. Su filosofía se basa en crear experiencias que
+              potencien la imagen y la confianza de cada cliente, entendiendo
+              que el cabello es una forma de expresión y un reflejo de la
+              identidad de cada persona.
+            </p>
+            <div class="equipo-tags">
+              <span class="equipo-tag">Peinados</span>
+              <span class="equipo-tag">Alisado</span>
+              <span class="equipo-tag">Moda</span>
+              <span class="equipo-tag">Producción</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="about-section" id="nosotros">
       <div class="about-img-wrap">
         <img
@@ -1542,6 +1771,112 @@
           ><span class="about-tag">Moda</span
           ><span class="about-tag">Backstage</span>
         </div>
+      </div>
+    </section>
+
+    <!--SECCIÓN PRODUCTOS -->
+    <section class="productos-section" id="productos">
+      <p class="section-eyebrow">Nuestros productos</p>
+      <h2 class="section-title">Marcas y herramientas</h2>
+      <p class="productos-intro">
+        Trabajamos exclusivamente con herramientas y productos profesionales de
+        marcas líderes a nivel internacional. Elegimos cada línea por su
+        calidad, innovación y respaldo técnico.
+      </p>
+
+      <div class="productos-grid">
+        <img
+          class="producto-foto"
+          src="producto1.JPG"
+          alt="IGORA Vibrance Schwarzkopf Professional"
+        />
+        <img
+          class="producto-foto"
+          src="varios.JPG"
+          alt="Productos profesionales Schwarzkopf en Gerda X Hair Studio"
+        />
+      </div>
+
+      <div class="marcas-grid">
+        <div class="marca-card">
+          <div class="marca-nombre">IGORA ROYAL</div>
+          <div class="marca-linea">
+            Schwarzkopf Professional — Coloración permanente
+          </div>
+          <p class="marca-desc">
+            Coloración de alto rendimiento con hasta 100% de cobertura de canas,
+            máxima intensidad de color y excelente durabilidad.
+          </p>
+        </div>
+
+        <div class="marca-card">
+          <div class="marca-nombre">IGORA VIBRANCE</div>
+          <div class="marca-linea">
+            Schwarzkopf Professional — Coloración demipermanente
+          </div>
+          <p class="marca-desc">
+            Ideal para tonalizar, matizar y aportar brillo al cabello. Acabado
+            natural con una fórmula suave que cuida la fibra capilar.
+          </p>
+        </div>
+
+        <div class="marca-card">
+          <div class="marca-nombre">BLONDME</div>
+          <div class="marca-linea">Schwarzkopf Professional — Decoloración</div>
+          <p class="marca-desc">
+            Sistema profesional de aclaración para la creación de rubios.
+            Protege la fibra capilar durante el proceso de decoloración.
+          </p>
+        </div>
+
+        <div class="marca-card">
+          <div class="marca-nombre">BONACURE (BC)</div>
+          <div class="marca-linea">Schwarzkopf Professional — Tratamientos</div>
+          <p class="marca-desc">
+            Línea de tratamientos para reparar, hidratar, fortalecer y proteger.
+            Incluye líneas específicas para color, frizz, nutrición y
+            mantenimiento.
+          </p>
+        </div>
+
+        <div class="marca-card">
+          <div class="marca-nombre">OSiS+</div>
+          <div class="marca-linea">Schwarzkopf Professional — Styling</div>
+          <p class="marca-desc">
+            Línea de styling para crear desde looks naturales hasta peinados de
+            alta fijación con volumen, textura y protección térmica.
+          </p>
+        </div>
+
+        <div class="marca-card">
+          <div class="marca-nombre">GAMA PROFESSIONAL</div>
+          <div class="marca-linea">Herramientas — iQ · Lumine · Bravo</div>
+          <p class="marca-desc">
+            Secadores iQ, planchas Lumine y rizadoras Bravo. Tecnología de alto
+            rendimiento para un secado rápido y resultados profesionales.
+          </p>
+        </div>
+
+        <div class="marca-card">
+          <div class="marca-nombre">LISS EXPERT</div>
+          <div class="marca-linea">Tratamientos — Alisado progresivo</div>
+          <p class="marca-desc">
+            Sistema de alisado progresivo que reduce el volumen, controla el
+            frizz y aporta brillo y suavidad con tecnología de inteligencia
+            artificial.
+          </p>
+        </div>
+      </div>
+
+      <div class="filosofia-box">
+        <p>
+          <strong>Nuestra filosofía:</strong> Trabajamos exclusivamente con
+          marcas líderes como <strong>Schwarzkopf Professional</strong>,
+          <strong>Gama Professional</strong> y
+          <strong>Liss Expert</strong> porque creemos que la calidad de los
+          productos es tan importante como la técnica. Tu cabello merece lo
+          mejor.
+        </p>
       </div>
     </section>
 
